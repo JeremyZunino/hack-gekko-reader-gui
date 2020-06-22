@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gekko hack tools</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
+<div id="app">
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-8">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Helper</h3>
+                    </div>
+                    <div class="card-body">
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-4">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Calculator</h3>
+                    </div>
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Dec</th>
+                                <th>Hex</th>
+                                <th>Bin</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <input type="number" class="form-control text-right" v-model="converterDec" style="width:110px;"/>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control text-right" v-model="converterHex" style="width:110px;"/>
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control text-right" v-model="converterBin" />
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-success" v-on:click="converterSave">Save</button>
+                                </td>
+                            </tr>
+                            <tr v-for="item in converterSaved">
+                                <td class="text-right">{{ item.dec }}</td>
+                                <td class="text-right">{{ item.hex }}</td>
+                                <td class="text-right">{{ item.bin }}</td>
+                                <td class="text-right"></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
